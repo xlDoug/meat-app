@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { RestaurantComponent } from './restaurant/restaurant.component';
+import { RestaurantInterface } from './restaurant/restaurant.model';
 
 @Component({
   selector: 'mt-restaurants',
@@ -11,5 +13,24 @@ export class RestaurantsComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  restaurants: RestaurantInterface[] = [
+  {
+    id: 'bread-bakery',
+    name: 'Bread & Bakery',
+    category: 'Bakery',
+    deliveryEstimate: '25m',
+    rating: 4.9,
+    imagePath: 'assets/img/restaurants/breadbakery.png'
+    },
+  {
+    id: 'burger-house',
+    name: 'Burger House',
+    category: 'Hamburgers',
+    deliveryEstimate: '100m',
+    rating: 3.5,
+    imagePath: 'assets/img/restaurants/burgerhouse.png'
+    }
+  ];
 
 }
